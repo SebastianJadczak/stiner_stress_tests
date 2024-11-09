@@ -1,11 +1,11 @@
-Stiner stress tests with javq and gatling
+Stiner stress Tests with javq and gatling
 ============================================
 
 
 
 It includes:
 
-* 
+* Get all points
 * 
 * 
 * 
