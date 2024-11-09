@@ -1,4 +1,4 @@
-Stiner stress Tests with javq and gatling
+Stiner stress Tests with java and gatling
 ============================================
 
 
