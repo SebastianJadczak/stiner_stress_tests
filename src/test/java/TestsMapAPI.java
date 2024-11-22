@@ -20,23 +20,34 @@ public class TestsMapAPI extends Simulation {
         System.out.printf("Ramping users over %d seconds%n", RAMP_DURATION);
     }
 
-    // Get all points
+    // Get all points: endpoint: /points/
     private static ChainBuilder getAllPoints = exec(http("Get all points").get("/points/"));
 
-    //todo: Get all city: endpoint: /mapCenter/
+    //Get all city: endpoint: /mapCenter/
+    private static ChainBuilder getCites = exec(http("Get cities").get("/mapCenter/"));
 
-    //todo: Get all country: endpoint: /country/
+    //Get all country: endpoint: /country/
+    private static ChainBuilder getCountries = exec(http("Get countries").get("/country/"));
 
-    //todo: Get all commercial places: endpoint: /commercial/
+    //Get all commercial places: endpoint: /commercial/
+    private static ChainBuilder getCommercial = exec(http("Get commercial").get("/commercial/"));
 
-    //todo:: Get all news: endpoint: /news/
+    //Get all news: endpoint: /news/
+    private static ChainBuilder getNewses = exec(http("Get newses").get("/news/"));
 
 
     //todo: have been to test the service to: /createUser/, /listUser/, /newsletter_email/. Important: API token hidden!
 
     private ScenarioBuilder scn = scenario("Stiner Stress Test")
             .exec(getAllPoints)
-            .pause(2);
+            .pause(2)
+            .exec(getCites)
+            .pause(2)
+            .exec(getCountries)
+            .pause(2)
+            .exec(getCommercial)
+            .pause(2)
+            .exec(getNewses);
 
     {
         setUp(
