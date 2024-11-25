@@ -38,7 +38,7 @@ public class TestsMapAPI extends Simulation {
 
     //todo: have been to test the service to: /createUser/, /listUser/, /newsletter_email/. Important: API token hidden!
 
-    private ScenarioBuilder scn = scenario("Stiner Stress Test")
+    private ScenarioBuilder scn = scenario("Stiner Stress Test Map")
             .exec(getAllPoints)
             .pause(2)
             .exec(getCites)
